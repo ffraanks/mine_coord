@@ -16,10 +16,10 @@ OBS: Tem que ter os 3(três) scripts baixados!!!
 
 #### Entra no seu PATH (Normalmente é: ~/.local/bin), e execute esses comandos:
 ```
-wget -c https://github.com/fraanks/mine_coord/raw/master/mine_coordenates
-wget -c https://github.com/fraanks/mine_coord/raw/master/minec
-wget -c https://github.com/fraanks/mine_coord/raw/master/auto_save
-wget -c https://github.com/fraanks/mine_coord/raw/master/manager_save
+wget -c https://github.com/ffraanks/mine_coord/raw/master/mine_coordenates
+wget -c https://github.com/ffraanks/mine_coord/raw/master/minec
+wget -c https://github.com/ffraanks/mine_coord/raw/master/auto_save
+wget -c https://github.com/ffraanks/mine_coord/raw/master/manager_save
 ```
 
 # Permissão aos scripts
