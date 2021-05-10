@@ -1,0 +1,59 @@
+#!/bin/env bash
+
+clear
+echo '
+ ██████╗ ██████╗  ██████╗ ██████╗ ██████╗ ██╗███╗   ██╗ █████╗ ████████╗███████╗███████╗
+██╔════╝██╔═══██╗██╔═══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔══██╗╚══██╔══╝██╔════╝██╔════╝
+██║     ██║   ██║██║   ██║██████╔╝██║  ██║██║██╔██╗ ██║███████║   ██║   █████╗  ███████╗
+██║     ██║   ██║██║   ██║██╔══██╗██║  ██║██║██║╚██╗██║██╔══██║   ██║   ██╔══╝  ╚════██║
+╚██████╗╚██████╔╝╚██████╔╝██║  ██║██████╔╝██║██║ ╚████║██║  ██║   ██║   ███████╗███████║
+ ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝
+                                                                                         '
+echo
+echo 'Press enter to continue...'
+read
+while true; do
+  clear
+  echo 'AVISO: O código pode spwanar você em QUALQUER LUGAR do minecraft, são números aleatorios imprimidos na tela, ou seja... ninguém sabe onde você sera dropado!'
+  echo
+  echo 'RECOMENDADO: Se você for usar esse programa, NÃO leve itens importantes, leve o basico você CORRE O RISCO de ser dropado direto a morte, '
+  echo
+  echo 'OBJETIVO DO PROGRAMA: O objetivo do programa é para você que quer viajar no MEGA MUNDO DO MINECRAFT aleatoriamente para pode farmar!!!'
+  echo
+  echo 'VOCÊ PODE...: Cair dentro de uma pedra e ficar bugado, nesse caso você pode teleportar para um local seguro que você conheca, ou quebrar a pedra com a picareta!'
+  echo 'VOCÊ PODE...: Cair de uma altura muito alta e morrer, você pode levar um balde de aguá e tentar no TIME (TEMPO) certo soltar a água para amortecer sua queda!'
+  echo 'VOCÊ PODE...: Cair em algum lugar bugado e não ter como quebrar o bloco e nem se teleportar, ou seja você pode morrer (RECOMENDADO: Levar itens necessários)!'
+  echo
+  echo '[1] - Coordenada aleatoria'
+  echo '[2] - Gerenciar coordenadas'
+  echo
+  echo 'Dica: Para sair do script pressione: Ctrl+C'
+  echo
+  read OPC
+  echo
+
+  if [ $OPC == '1' ];then
+    echo
+    mine_coordenates
+    echo
+    echo 'Deseja salvar?'
+    echo
+    echo '1 - Sim'
+    echo '2 - Não'
+    echo
+    read SAVE
+    echo
+  elif [ $OPC == '2' ];then
+    echo
+    manager_save
+  fi
+ 
+  if [ $SAVE == '1' ];then
+    auto_save 
+    echo 'Press enter to continue...'
+    echo
+    read
+  elif [ $SAVE != '1' ]; then
+    continue
+  fi
+done
