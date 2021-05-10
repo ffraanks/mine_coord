@@ -1,0 +1,7 @@
+#!/bin/env bash
+
+echo 'Copie a coordenada acima e cole logo abaixo com o nome dela: (Ex: /tp X Y Z - Minha casa)'
+echo
+read COORD
+echo
+echo $COORD >> ~/.Teleports
