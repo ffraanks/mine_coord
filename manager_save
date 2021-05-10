@@ -1,0 +1,36 @@
+#!/bin/env bash
+
+while true; do
+  echo 'AVISO: Todas as TPs salvas no automatico são escritas no final do arquivo, caso você queira organizar, você pode escolher a opção: [2] - Gerenciar minhas coordenadas OU abrir seu editor de texto preferido em: $EDITOR ~/.Teleports para organizar tudo manualmente!!!'
+  echo
+  echo 'O que você deseja fazer?:'
+  echo
+  echo '[1] - Salvar coordenadas'
+  echo '[2] - Gerenciar minhas coordenadas'
+  echo '[3] - Limpar tela'
+  echo '[4] - Voltar'
+  echo
+  echo 'Dica: Para sair do script você pode pressionar: Ctrl+C'
+  echo
+  read OPC1
+
+  # Conditions
+  if [ $OPC1 == '1' ];then
+    echo
+    echo 'Cole a coordenada aqui e coloque o nome dela: (Ex: X Y Z - Minha casa)'
+    echo
+    read COORD
+    echo
+    echo '/tp' $COORD >> ~/.Teleports
+    echo
+
+  elif [ $OPC1 == '2' ];then
+    $EDITOR ~/.Teleports
+
+  elif [ $OPC1 == '3' ];then
+    clear
+
+  elif [ $OPC1 == '4' ];then
+    ~/.local/bin/minec
+  fi
+done
