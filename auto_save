@@ -4,5 +4,5 @@ printf "Copie a coordenada acima e cole logo abaixo com o nome dela: (Ex: /tp X 
 read COORD
 cd $HOME/.coords_mine && ls && printf "\nDigite o nome do arquivo para salvar a coordenada:\n\n"
 read FILE_COORD
-printf "$COORD >> $FILE_COORD"
+echo "$COORD" >> $HOME/.coords_mine/"$FILE_COORD"
 
