@@ -39,7 +39,8 @@ VOCÊ PODE...: Cair em algum lugar bugado e não ter como quebrar o bloco e nem 
   fi
  
   if [ $SAVE == '1' ] || [ $SAVE == '01' ] ; then
-    auto_save 
+    auto_save
+    printf "\n\n"
     read -p 'Press enter to continue...'
   
   elif [ $SAVE != '1' ] || [ $SAVE == '01' ] ; then 
