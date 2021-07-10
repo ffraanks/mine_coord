@@ -7,36 +7,44 @@ while true; do
 
   printf "\n\nO que você deseja fazer?:\n\n"
   printf "[01] - Criar um novo arquivo de texto\n"
-  printf "[02] - Salvar coordenadas\n"
-  printf "[03] - Gerenciar minhas coordenadas\n"
-  printf "[04] - Limpar tela\n"
-  printf "[05] - Voltar\n\n"
+  printf "[02] - Remover um arquivo de texto\n"
+  printf "[03] - Salvar coordenadas\n"
+  printf "[04] - Gerenciar minhas coordenadas\n"
+  printf "[05] - Limpar tela\n"
+  printf "[06] - Voltar\n\n"
   printf "Dica: Para sair do script você pode pressionar: Ctrl+C\n\n"
   read OPC1
 
   # Conditions
   if [ $OPC1 == '1' ] || [ $OPC1 == '01' ] ; then
     clear
-    cd $HOME/.coords_mine && printf "Digite o nome do Arquivo (Evite espaços e acentuações):\n\n"
+    printf "Digite o nome do Arquivo (Evite espaços e acentuações):\n\n"
     read FILE_NAME
-    touch $HOME/."$FILE_NAME"
+    touch $HOME/.coords_mine/"$FILE_NAME"
 
   elif [ $OPC1 == '2' ] || [ $OPC1 == '02' ] ; then
-    printf "\n\nCole a coordenada aqui e coloque o nome dela: (Ex: X Y Z - Minha casa)\n\n"
-    read COORD
-    cd $HOME/.coords_mine && ls && printf "\n\n Agora digite o nome do arquivo que queira salvar:\n\n"
-    read FILE_NAME1
-    cd $HOME/.coords_mine && printf "\n\n/tp $COORD >> $FILE_NAME1"
+    clear
+    cd $HOME/.coords_mine && ls
+    printf "\nDigite o nome do arquivo que de deseja remover:\n\n"
+    read REMOVE_FILE
+    rm -rf $REMOVE_FILE
 
   elif [ $OPC1 == '3' ] || [ $OPC1 == '03' ] ; then
+    printf "\n\nCole a coordenada aqui e coloque o nome dela: (Ex: X Y Z - Minha casa)\n\n"
+    read COORD
+    cd $HOME/.coords_mine/ && ls && printf "\n\n Agora digite o nome do arquivo que queira salvar:\n\n"
+    read FILE_NAME1
+    echo '/tp' "$COORD" >> $HOME/.coords_mine/"$FILE_NAME1"
+
+  elif [ $OPC1 == '4' ] || [ $OPC1 == '04' ] ; then
     cd $HOME/.coords_mine && clear && ls && printf "\nEscolha qual arquivo de texto você quer gerenciar:\n\n"
     read FILE_NAME2
     cd $HOME/.coords_mine && $EDITOR $FILE_NAME2
 
-  elif [ $OPC1 == '4' ] || [ $OPC1 == '04' ] ; then
+  elif [ $OPC1 == '5' ] || [ $OPC1 == '05' ] ; then
     clear
 
-  elif [ $OPC1 == '5' ] || [ $OPC1 == '05' ] ; then
+  elif [ $OPC1 == '6' ] || [ $OPC1 == '06' ] ; then
     $HOME/.local/bin/minec
   fi
 done
