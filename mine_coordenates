@@ -1,6 +1,7 @@
 #!/bin/python3
 
 # Imports
+import os
 import random
 
 # VAR
@@ -21,5 +22,7 @@ coord1 = random.randint(1 , 9999)
 coord2 = random.randint(1 , 99)
 coord3 = random.randint(1 , 999999)
 
+os.system('clear')
 print(f'X: {result1}{coord1} / Y: {coord2} / Z: {coord3}')
 print(f'\n/tp {result1}{coord1} {coord2} {coord3}')
+
