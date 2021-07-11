@@ -33,11 +33,6 @@ chmod +x auto_save
 chmod +x manager_save
 ```
 
-#### Crie um TXT, caso não tenha (Esse TXT é bom para caso você queira salvar uma coordenada no game):
-```
-touch ~/.Teleports
-```
-
 ### Pronto está finalizado, se os scripts estiverem no PATH você pode executar ele em qualquer lugar do terminal.
 
 # Como usar:
