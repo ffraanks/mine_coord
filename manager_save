@@ -3,7 +3,7 @@
 while true; do
   mkdir $HOME/.coords_mine
   clear
-  printf "AVISO: Todas as TPs salvas no automatico são escritas no final do arquivo, caso você queira organizar, você pode escolher a opção: [2] - Gerenciar minhas coordenadas OU abrir seu editor de texto preferido em: $EDITOR (Nome do arquivo) para organizar tudo manualmente!!!"
+  printf "AVISO: Todas as TPs salvas no automatico são escritas no final do arquivo, caso você queira organizar, você podeescolher a opção: [2] - Gerenciar minhas coordenadas OU abrir seu editor de texto preferido em: $EDITOR (Nome do arquivo) para organizar tudo manualmente!!!"
 
   printf "\n\nO que você deseja fazer?:\n\n"
   printf "[01] - Criar um novo arquivo de texto\n"
@@ -48,4 +48,3 @@ while true; do
     $HOME/.local/bin/minec
   fi
 done
-
