@@ -4,13 +4,13 @@
 import os
 import random
 
-# VAR
+# Variaveis
 var1 = '-'
 var2 = ''
-result = var1 , var2
+result = var1, var2
 result1 = random.choice(result)
 
-# LOCATION
+# Localização
 X = ''
 Y = ''
 Z = ''
@@ -18,11 +18,12 @@ coord1 = X
 coord2 = Y
 coord3 = Z
 
-coord1 = random.randint(1 , 9999)
-coord2 = random.randint(1 , 99)
-coord3 = random.randint(1 , 999999)
+# Gerando coordenadas
+coord1 = random.randint(1, 9999)
+coord2 = random.randint(1, 99)
+coord3 = random.randint(1, 999999)
 
+# Resultado
 os.system('clear')
 print(f'X: {result1}{coord1} / Y: {coord2} / Z: {coord3}')
 print(f'\n/tp {result1}{coord1} {coord2} {coord3}')
-
